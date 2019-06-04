@@ -8,6 +8,13 @@ import java.util.stream.IntStream;
 
 public class DateUtil {
 
+    /**
+     *
+     * @param startDate Fecha inicio
+     * @param endDate Fecha termino
+     * @param exceptionDate fechas que ya se encuentran en el array de entrada
+     * @return LocalDate fechas que faltan en el array exceptionDate
+     */
     public static List<LocalDate> getDatesBetween(
             LocalDate startDate, LocalDate endDate, List<LocalDate> exceptionDate) {
 
@@ -19,6 +26,12 @@ public class DateUtil {
                 .collect(Collectors.toList());
     }
 
+    /**
+     *
+     * @param startDate fecha inicio
+     * @param endDate fecha termino
+     * @return Numero de meses entre fecha inicio fecha termino
+     */
     public static Long numOfMonthsBetween(
             LocalDate startDate, LocalDate endDate) {
         return ChronoUnit.MONTHS.between(startDate, endDate) + 1;

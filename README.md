@@ -18,6 +18,16 @@ Ingresar a la carpeta raiz del proyecto y ejecutar el siguiente comando maven
 
 Nota: Debe estar disponible el puerto 9090 en el PC donde se ejecute esta API
 
+### Consumir Api
+
+Para invocar la api debe ejecutar el siguiente comando
+
+```bash
 curl -X GET --header 'Accept: application/json' 'http://localhost:9090/api/v1/periodos'
+```
+
+# Visualizar Documentación
+
+La documentación swagger del API (una vez que se levanta el API) queda disponible en
 
 http://localhost:9090/api/v1/swagger-ui.html#/

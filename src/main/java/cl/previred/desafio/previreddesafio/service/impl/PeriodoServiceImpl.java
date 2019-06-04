@@ -20,6 +20,10 @@ public class PeriodoServiceImpl implements PeriodoService {
     @Autowired
     private Environment env;
 
+    /**
+     * Devuelve Objeto con la lista de fechas faltantes
+     * @return PeriodosFaltantesDTO
+     */
     @Override
     public PeriodosFaltantesDTO obtenerPeriodosFaltantes(){
         PeriodoDTO periodos = obtenerPeriodo();
@@ -35,6 +39,10 @@ public class PeriodoServiceImpl implements PeriodoService {
 
     }
 
+    /**
+     * Obtiene fecha creacion, fecha fin y lista de fechas a traves LLamada a API Generador De Datos
+     * @return PeriodoDTO
+     */
     public PeriodoDTO obtenerPeriodo(){
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
